@@ -5,6 +5,11 @@ import java.util.TreeMap;
 
 import lombok.Getter;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * An abstract class which contains the common header of the Http headers for both request and response.
+ */
 @Getter
 public abstract class HttpHeader {
 

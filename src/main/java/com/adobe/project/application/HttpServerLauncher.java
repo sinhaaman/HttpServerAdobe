@@ -15,6 +15,11 @@ import org.apache.commons.cli.ParseException;
 import com.adobe.project.server.HttpServer;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * Launcher for the server. This class contains the parser to parse and configure the user specified directory.
+ */
 
 @Slf4j
 public class HttpServerLauncher {

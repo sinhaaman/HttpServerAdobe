@@ -2,6 +2,11 @@ package com.adobe.project.response;
 
 import lombok.Getter;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * This class contains the status codes of the responses along with messages with them.
+ */
 @Getter
 public enum ResponseCodes {
 

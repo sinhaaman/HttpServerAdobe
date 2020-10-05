@@ -4,6 +4,12 @@ import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * {@link ServerExecutorService} class returns a {@link ExecutorService} with the defined threadpool size.
+ *
+ */
 public class ServerExecutorService {
 
     private static final int MAX_THREADS = 20;

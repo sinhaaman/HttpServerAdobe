@@ -1,8 +1,17 @@
 package com.adobe.project.response;
 
+import com.adobe.project.headers.HttpRequestHeader;
 import com.adobe.project.headers.HttpResponseHeader;
+import com.adobe.project.request.HttpRequest;
+import com.adobe.project.request.HttpRequestOperationLine;
 import lombok.Builder;
 import lombok.Getter;
+
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * {@link HttpResponse} is a composition of the {@link ResponseCodes}, content body, {@link HttpResponseHeader} and version.
+ */
 
 @Builder
 @Getter

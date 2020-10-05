@@ -8,6 +8,13 @@ import com.adobe.project.handler.HttpConnectionHandler;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * This class is responsible for starting, stopping the server and creating {@link HttpConnectionHandler}  to serve the request
+ * passed to the server socket.
+ */
+
 @Getter
 @Slf4j
 public class HttpServer implements Runnable {

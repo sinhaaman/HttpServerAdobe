@@ -1,7 +1,14 @@
 package com.adobe.project.request;
 
+import com.adobe.project.headers.HttpRequestHeader;
 import lombok.Builder;
 import lombok.Getter;
+
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * {@link HttpRequestOperationLine} contains method, path and version of the request.
+ */
 
 @Getter
 @Builder

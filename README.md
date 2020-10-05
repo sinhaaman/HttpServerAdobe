@@ -12,7 +12,8 @@ The server can also be configured to run inside a docker container.
  - This server supports the following HTTP methods:   GET  & HEAD
  - Persistent connections through keep-alive. As per HTTP/1.1, this server supports **keep-alive** with a server specified timeout and the number of request.
    By default, the keep-alive feature is enabled and the details about the serving socket can be seen in the logs.
-   In order to disable the keep-alive, pass the Connection Header with the value "close". See more information, see [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection). 
+   In order to disable the keep-alive, pass the Connection Header with the value "close". See more information, see [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection).
+   Currently, we have configured the server to have a socket timeout as 10 seconds and the max requests as 5. 
  - Multi-threading while request handling.
  - Customizable directory file browsing 
 

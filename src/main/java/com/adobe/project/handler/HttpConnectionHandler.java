@@ -10,12 +10,22 @@ import java.net.SocketTimeoutException;
 import com.adobe.project.io.HttpRequestParser;
 import com.adobe.project.request.HttpRequest;
 import com.adobe.project.response.HttpResponse;
+import com.adobe.project.response.HttpResponseGenerator;
 import lombok.extern.slf4j.Slf4j;
 
 import static com.adobe.project.headers.HttpHeader.CONNECTION;
-import static com.adobe.project.response.ResponseGenerator.addKeepAliveHeaders;
-import static com.adobe.project.response.ResponseGenerator.createHttpResponse;
+import static com.adobe.project.response.HttpResponseGenerator.addKeepAliveHeaders;
+import static com.adobe.project.response.HttpResponseGenerator.createHttpResponse;
 import static java.nio.charset.StandardCharsets.UTF_8;
+
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * This is the connection handler class which reads the request to the given port using the {@link HttpRequestParser}
+ * and then return the appropriate response to the server using the {@link HttpResponseGenerator}.
+ *
+ * This handler also has keep-alive functionality with the max-request and socket read-timeout.
+ */
 
 @Slf4j
 public class HttpConnectionHandler implements Runnable {

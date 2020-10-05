@@ -2,6 +2,13 @@ package com.adobe.project.headers;
 
 import lombok.Getter;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * {@link HttpResponseHeader} is used for creating the response from the
+ * {@link com.adobe.project.response.HttpResponseGenerator}
+ */
+
 @Getter
 public class HttpResponseHeader extends HttpHeader {
 

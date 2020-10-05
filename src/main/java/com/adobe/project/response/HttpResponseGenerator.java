@@ -19,15 +19,22 @@ import static io.vavr.API.Case;
 import static io.vavr.API.Match;
 import static io.vavr.Predicates.instanceOf;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * This is a static class which creates a HttpResponse for a given {@link HttpRequest}. There is a switching logic inside the class
+ * which reads the operation in {@link HttpRequest} and then produces the {@link HttpResponse}.
+ */
+
 @Slf4j
-public final class ResponseGenerator {
+public final class HttpResponseGenerator {
 
     private static final String DEFAULT_FILE = "/index.html";
     private static final String FILE_NOT_FOUND = "/page_404.html";
     private static final String METHOD_NOT_SUPPORTED = "/not_supported.html";
     private static final String RESPONSE_SERVER_NAME = "Adobe Assessment Server";
 
-    private ResponseGenerator() {
+    private HttpResponseGenerator() {
 
     }
 
@@ -94,7 +101,7 @@ public final class ResponseGenerator {
     private static HttpResponse createUnimplementedHttpResponse(final String webRoot) {
 
         String fileData = Try.of(
-            ()-> new String(Files.readAllBytes(Paths.get(webRoot + ResponseGenerator.METHOD_NOT_SUPPORTED)))
+            ()-> new String(Files.readAllBytes(Paths.get(webRoot + METHOD_NOT_SUPPORTED)))
         ).recover(e -> Match(e).of(
             Case($(instanceOf(NoSuchFileException.class)), "Method not supported")
         )).get();
@@ -121,7 +128,7 @@ public final class ResponseGenerator {
 
         log.info("Requested file not found: " + filePath.toString());
 
-        final Path fileNotFoundPath = Paths.get(webRoot + ResponseGenerator.FILE_NOT_FOUND);
+        final Path fileNotFoundPath = Paths.get(webRoot + FILE_NOT_FOUND);
 
         log.info("Accessing the file " + fileNotFoundPath.toString() + " to return contents");
 

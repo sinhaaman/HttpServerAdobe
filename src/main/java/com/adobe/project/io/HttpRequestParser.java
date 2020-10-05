@@ -18,6 +18,8 @@ import com.adobe.project.request.HttpRequestOperationLine;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
  * Holds the input stream and keeps listening to it. This class has a blocking call. Once the inputstream receives data,
  * it parses the data and creates a HttpRequest to be sent to the caller.
  * e.g. {@link com.adobe.project.handler.HttpConnectionHandler} uses the HttpRequestParser and the parseHttpRequest

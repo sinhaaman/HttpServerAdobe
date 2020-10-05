@@ -4,6 +4,13 @@ import java.util.Map;
 
 import lombok.Getter;
 
+/**
+ * @author <a href="mailto:amansinh@gmail.com">Aman Sinha</a>
+ *
+ * HttpRequestheader is used while parsing the header of the request from the
+ * {@link com.adobe.project.io.HttpRequestParser}
+ */
+
 @Getter
 public class HttpRequestHeader extends HttpHeader {
 
