@@ -19,10 +19,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class HttpServer implements Runnable {
 
-    private enum ServerState {
+    public enum ServerState {
         INITIALIZED,
         RUNNING,
-        STOPPED;
+        STOPPED
     }
 
     private static final int DEFAULT_PORT = 8080;

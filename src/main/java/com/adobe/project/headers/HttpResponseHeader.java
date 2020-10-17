@@ -1,5 +1,7 @@
 package com.adobe.project.headers;
 
+import java.util.Map;
+
 import lombok.Getter;
 
 /**
@@ -30,6 +32,10 @@ public class HttpResponseHeader extends HttpHeader {
 
     public HttpResponseHeader() {
         super();
+    }
+
+    public HttpResponseHeader(final Map<String, String> map) {
+        super(map);
     }
 
     @Override
