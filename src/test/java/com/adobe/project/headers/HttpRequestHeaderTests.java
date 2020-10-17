@@ -77,15 +77,15 @@ public class HttpRequestHeaderTests {
     public void HttpRequestToStringFormatTest() {
         // given
         String expectedStringFormat =
-            "Accept: TestUserAccept\r\n" +
-            "Accept-Encoding: TestEncoding\r\n" +
-            "Accept-Language: TestAcceptLanguage\r\n" +
-            "Host: TestHost\r\n" +
-            "If-Modified-Since: TestModified\r\n" +
-            "If-None-Match: TestNoneMatch\r\n" +
-            "Referer: TestReferer\r\n" +
-            "Upgrade-Insecure-Requests: TestUpgrade\r\n" +
-            "User-Agent: TestUserAgent\r\n";
+            "Accept: TestUserAccept" + System.lineSeparator() +
+            "Accept-Encoding: TestEncoding" + System.lineSeparator() +
+            "Accept-Language: TestAcceptLanguage" + System.lineSeparator() +
+            "Host: TestHost" + System.lineSeparator() +
+            "If-Modified-Since: TestModified" + System.lineSeparator() +
+            "If-None-Match: TestNoneMatch" + System.lineSeparator() +
+            "Referer: TestReferer" +System.lineSeparator() + 
+            "Upgrade-Insecure-Requests: TestUpgrade" + System.lineSeparator() + 
+            "User-Agent: TestUserAgent" + System.lineSeparator();
 
         // when
         HttpRequestHeader httpRequestHeader = new HttpRequestHeader(testHeadersMap);

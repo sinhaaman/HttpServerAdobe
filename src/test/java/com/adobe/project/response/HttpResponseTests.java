@@ -68,23 +68,22 @@ public class HttpResponseTests {
     public void HttpResponseToStringTest() {
         // given
         String expectedStringFormat =
-                "HTTP/1.1 200 OK\r\n" +
-                "Access-Control-Allow-Origin: TestAccessControl\r\n" +
-                "Content-Encoding: TestContentEncoding\r\n" +
-                "Content-Length: TestContentLength\r\n" +
-                "Content-Type: TestContentType\r\n" +
-                "Etag: TestEtag\r\n" +
-                "Keep-Alive: TestKeepAlive\r\n" +
-                "Last-Modified: TestLastModified\r\n" +
-                "Server: TestServer\r\n" +
-                "Set-Cookie: TestSetCookie\r\n" +
-                "Transfer-Encoding: TestSetCookie\r\n" +
-                "Vary: TestSetCookie\r\n" +
-                "X-Backend-Server: TestSetCookie\r\n" +
-                "X-Cache-Info: TestSetCookie\r\n" +
-                "X-kuma-revision: TestKumaRevision\r\n" +
-                "x-frame-options: TestFrameOptions\r\n" +
-                "\r\n";
+                "HTTP/1.1 200 OK" + System.lineSeparator() +
+                "Access-Control-Allow-Origin: TestAccessControl" + System.lineSeparator() +
+                "Content-Encoding: TestContentEncoding" + System.lineSeparator() +
+                "Content-Length: TestContentLength" + System.lineSeparator() +
+                "Content-Type: TestContentType" + System.lineSeparator() +
+                "Etag: TestEtag" + System.lineSeparator() +
+                "Keep-Alive: TestKeepAlive" + System.lineSeparator() +
+                "Last-Modified: TestLastModified" + System.lineSeparator() +
+                "Server: TestServer" + System.lineSeparator() +
+                "Set-Cookie: TestSetCookie" + System.lineSeparator() +
+                "Transfer-Encoding: TestSetCookie" + System.lineSeparator() +
+                "Vary: TestSetCookie" + System.lineSeparator() +
+                "X-Backend-Server: TestSetCookie" + System.lineSeparator() +
+                "X-Cache-Info: TestSetCookie" + System.lineSeparator() +
+                "X-kuma-revision: TestKumaRevision" + System.lineSeparator() +
+                "x-frame-options: TestFrameOptions" + System.lineSeparator() + System.lineSeparator();
         HttpResponseHeader httpResponseHeader = new HttpResponseHeader(testHeadersMap);
         HttpResponse httpResponse = HttpResponse.builder()
             .httpResponseHeader(httpResponseHeader)
